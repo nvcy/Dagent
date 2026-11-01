@@ -13,7 +13,7 @@ def main():
     chain = prompt | llm
     topic = input("Enter the topic you want to know about: ")
     response = chain.invoke({"topic": topic})
-    print(response.content[0].text)
+    print(response.content[0].get("text"))
 
 if __name__ == "__main__":
     main()
