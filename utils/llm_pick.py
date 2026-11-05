@@ -12,10 +12,10 @@ def pick_llm(level: str):
         str: The name of the picked LLM.
     """
     if level.lower() == "basic":
-        return ChatGoogleGenerativeAI(model="gemini-3.8-flash", temperature=0.7, max_output_tokens=1024)
+        return ChatGoogleGenerativeAI(model="gemini-3.8-flash", temperature=0, max_output_tokens=1024)
     elif level.lower() == "intermediate":
-        return ChatGoogleGenerativeAI(model="gemini-4.0", temperature=0.7, max_output_tokens=1024)
+        return ChatGoogleGenerativeAI(model="gemini-4.0", temperature=0, max_output_tokens=1024)
     elif level.lower() == "advanced":
-        return ChatGoogleGenerativeAI(model="gemini-4.5", temperature=0.7, max_output_tokens=1024)
+        return ChatGoogleGenerativeAI(model="gemini-4.5", temperature=0, max_output_tokens=1024)
     else:
         raise ValueError("Invalid level provided. Choose from 'basic', 'intermediate', or 'advanced'.")
